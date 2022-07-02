@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import styles from '../../styles/Home.module.css';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
-const Intro = (props: any) => {
+const Collections = (props: any) => {
   return (
     <Box>
       <CssBaseline />
@@ -70,4 +68,4 @@ const Intro = (props: any) => {
     </Box>
   );
 };
-export default Intro;
+export default Collections;
