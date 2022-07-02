@@ -1,8 +1,9 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
+import Header from '../components/Header'
+import Intro from '../components/Intro'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -10,6 +11,9 @@ const Home: NextPage = () => {
       primary: {
         main: '#424B25',
       },
+      secondary: {
+        main: '#F9DE80',
+      }
     },
   });
 
@@ -23,6 +27,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <Header theme={theme}/>
+        <Intro theme={theme} />
       </main>
 
     </ThemeProvider>
