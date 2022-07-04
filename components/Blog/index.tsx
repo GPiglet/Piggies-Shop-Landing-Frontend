@@ -19,7 +19,7 @@ const ArticleWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ArticleImageWrapper = styled(Box)(({ theme }) => ({
+const ArticleImageWrapper: any = styled(Box)(({ theme }) => ({
   width: '100%',
   position: 'relative',
   borderRadius: '12px 12px 0 0',
