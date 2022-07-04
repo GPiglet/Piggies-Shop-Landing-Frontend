@@ -5,7 +5,8 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
 import Categories from '../components/Categories'
-import Collection from '../components/Collection'
+import Collections from '../components/Collections'
+import BestSellers from '../components/BestSellers'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -31,7 +32,8 @@ const Home: NextPage = () => {
         <Header theme={theme}/>
         <Intro theme={theme} />
         <Categories theme={theme}/>
-        <Collection theme={theme}/>
+        <Collections theme={theme}/>
+        <BestSellers theme={theme}/>
       </main>
 
     </ThemeProvider>
