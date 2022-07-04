@@ -9,6 +9,7 @@ import Collections from '../components/Collections'
 import BestSellers from '../components/BestSellers'
 import Events from '../components/Events'
 import Trends from '../components/Trends'
+import Blog from '../components/Blog'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
         <BestSellers theme={theme}/>
         <Events theme={theme}/>
         <Trends theme={theme}/>
+        <Blog theme={theme}/>
       </main>
 
     </ThemeProvider>

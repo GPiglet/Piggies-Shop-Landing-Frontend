@@ -16,10 +16,10 @@ import ProductAddCart from '../Products/ProductAddCart';
 
 const BestSellers = (props: any) => {
   const products = [
-    {title: 'Aroma Diffuser', image: '/product1.png', alt: 'Aroma Diffuser', desc: 'Original product comes in three styles of color, usb charger', price: 20},
-    {title: 'Lux Aroma Diffuser', image: '/product2.png', alt: 'Lux Aroma Diffuser', desc: 'Beautiful decorative object, perfumes the space with your favorite fragrance.', price: 15},
-    {title: 'Diffusers', image: '/category3.png', alt: 'Diffusers'},
-    {title: 'Aromatherapy', image: '/category4.png', alt: 'Aromatherapy'},
+    {title: 'Aroma Diffuser', image: '/product1.png', desc: 'Original product comes in three styles of color, usb charger', price: 20},
+    {title: 'Lux Aroma Diffuser', image: '/product2.png', desc: 'Beautiful decorative object, perfumes the space with your favorite fragrance.', price: 15},
+    {title: 'Diffusers', image: '/category3.png'},
+    {title: 'Aromatherapy', image: '/category4.png'},
   ];
   const colors = ['#E29696', '#A1E296', '#82D2EC', '#9E9DF1'];
   return (
@@ -80,7 +80,7 @@ const BestSellers = (props: any) => {
                       width: '100%'
                     }}
                     component="img"
-                    alt={product.alt}
+                    alt={product.title}
                     src={product.image}
                   />
                 </ProductImageWrapper>

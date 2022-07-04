@@ -16,10 +16,10 @@ import ProductAddCart from '../Products/ProductAddCart';
 
 const Trends = (props: any) => {
   const products = [
-    {title: 'Basket INNER BEAUTY', image: '/product3.png', alt: 'Basket INNER BEAUTY', desc: 'Luminescent Nutritive Serum, Rose Petal Hydrosol Mist  and Nourish Mud Cleanser. ', price: 6495},
-    {title: 'Uplift Handcrafted Soap Bar', image: '/product4.png', alt: 'Uplift Handcrafted Soap Bar', desc: 'Is a peaceful and balancing bar topped with calendula, dried rose petals and lavender.', price: 7},
-    {title: 'Diffusers', image: '/category3.png', alt: 'Diffusers'},
-    {title: 'Aromatherapy', image: '/category4.png', alt: 'Aromatherapy'},
+    {title: 'Basket INNER BEAUTY', image: '/product3.png', desc: 'Luminescent Nutritive Serum, Rose Petal Hydrosol Mist  and Nourish Mud Cleanser. ', price: 6495},
+    {title: 'Uplift Handcrafted Soap Bar', image: '/product4.png', desc: 'Is a peaceful and balancing bar topped with calendula, dried rose petals and lavender.', price: 7},
+    {title: 'Diffusers', image: '/category3.png'},
+    {title: 'Aromatherapy', image: '/category4.png'},
   ];
   const colors = ['#E29696', '#A1E296', '#82D2EC', '#9E9DF1'];
   return (
@@ -79,7 +79,7 @@ const Trends = (props: any) => {
                       width: '100%'
                     }}
                     component="img"
-                    alt={product.alt}
+                    alt={product.title}
                     src={product.image}
                   />
                 </ProductImageWrapper>
