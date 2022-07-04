@@ -38,7 +38,7 @@ const Intro = (props: any) => {
                   fontSize: 30,
                   fontWeight: 700,
                   color: props.theme.palette.primary.main, 
-                  bgcolor: props.theme.palette.secondary.main,
+                  bgcolor: '#F9DE80',
                   borderRadius: 0,
                 }}
               >

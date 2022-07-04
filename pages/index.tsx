@@ -8,6 +8,7 @@ import Categories from '../components/Categories'
 import Collections from '../components/Collections'
 import BestSellers from '../components/BestSellers'
 import Events from '../components/Events'
+import Trends from '../components/Trends'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
         main: '#424B25',
       },
       secondary: {
-        main: '#F9DE80',
+        main: '#EAA34D',
       }
     },
   });
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
         <Collections theme={theme}/>
         <BestSellers theme={theme}/>
         <Events theme={theme}/>
+        <Trends theme={theme}/>
       </main>
 
     </ThemeProvider>

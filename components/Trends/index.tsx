@@ -14,10 +14,10 @@ import ProductDesc from '../Products/ProductDesc';
 import ProductPrice from '../Products/ProductPrice';
 import ProductAddCart from '../Products/ProductAddCart';
 
-const BestSellers = (props: any) => {
+const Trends = (props: any) => {
   const products = [
-    {title: 'Aroma Diffuser', image: '/product1.png', alt: 'Aroma Diffuser', desc: 'Original product comes in three styles of color, usb charger', price: 20},
-    {title: 'Lux Aroma Diffuser', image: '/product2.png', alt: 'Lux Aroma Diffuser', desc: 'Beautiful decorative object, perfumes the space with your favorite fragrance.', price: 15},
+    {title: 'Basket INNER BEAUTY', image: '/product3.png', alt: 'Basket INNER BEAUTY', desc: 'Luminescent Nutritive Serum, Rose Petal Hydrosol Mist  and Nourish Mud Cleanser. ', price: 6495},
+    {title: 'Uplift Handcrafted Soap Bar', image: '/product4.png', alt: 'Uplift Handcrafted Soap Bar', desc: 'Is a peaceful and balancing bar topped with calendula, dried rose petals and lavender.', price: 7},
     {title: 'Diffusers', image: '/category3.png', alt: 'Diffusers'},
     {title: 'Aromatherapy', image: '/category4.png', alt: 'Aromatherapy'},
   ];
@@ -26,8 +26,7 @@ const BestSellers = (props: any) => {
     <Box
       sx={{
         p: 12,
-        mt: 16,
-        background: 'url(/best-seller-left.png) no-repeat',
+        background: 'url(/trends-left.png) no-repeat',
         backgroundSize: 'auto',
         backgroundPositionX: 'left',
         backgroundPositionY: 'bottom',
@@ -55,7 +54,7 @@ const BestSellers = (props: any) => {
               m: 1,
             }}
           >
-            Best Sellers
+            Trends
           </Typography>
           <Button variant="contained" sx={{m: 2, padding: '10px 48px', borderRadius: '8px'}} >
             Shop All
@@ -113,4 +112,4 @@ const BestSellers = (props: any) => {
     </Box>
   );
 };
-export default BestSellers;
+export default Trends;
