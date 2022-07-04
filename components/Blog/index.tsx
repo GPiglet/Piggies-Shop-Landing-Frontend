@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 
 const ArticleWrapper = styled(Box)(({ theme }) => ({
   boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.15)',
@@ -55,6 +56,7 @@ const Blog = (props: any) => {
     {title: 'Geranium Bourbon: Fresh, floral, sweet', content: 'Fill your space with a fresh, uplifting aroma reminiscent of a greenhouse in full', image: '/article3.png'},
   ]
   return (
+    <Container maxWidth="xl" disableGutters>
     <Box
       sx={{
         p: 12,
@@ -110,6 +112,7 @@ const Blog = (props: any) => {
         See All
       </Button>
     </Box>
+    </Container>
   );
 };
 export default Blog;

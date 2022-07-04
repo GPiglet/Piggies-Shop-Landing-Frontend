@@ -8,9 +8,8 @@ import Button from '@mui/material/Button';
 
 const Collections = (props: any) => {
   return (
-    <Box>
+    <Container maxWidth="xl" disableGutters>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}}} disableGutters>
         <Grid container>
           <Grid item xs={12} md={6}>
             <Box
@@ -18,7 +17,6 @@ const Collections = (props: any) => {
               sx={{
                 display: {xs: 'none', md: 'block'},
                 position: 'relative',
-                left: -103,
                 top: 50,
                 width: '100%',
               }}
@@ -63,9 +61,7 @@ const Collections = (props: any) => {
             </div>
           </Grid>          
         </Grid>
-      </Container>
-      
-    </Box>
+    </Container>
   );
 };
 export default Collections;

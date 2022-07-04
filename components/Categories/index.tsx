@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 
 const CategoryWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: '#FFFDF5',
@@ -36,36 +37,38 @@ const Categories = (props: any) => {
     {title: 'Aromatherapy', icon: '/category4.png', alt: 'Aromatherapy'},
   ]
   return (
-    <Box
-      sx={{
-        p: 12,
-        mt: 24,
-        background: 'url(/texture.png)',
-        backgroundColor: '#f1f1f1',
-        textAlign: 'center'
-      }}
-    >
+    <Container maxWidth="xl" disableGutters>
       <CssBaseline />
-      <Grid container>
-        {categories.map((category, index) => {
-          return (
-            <Grid item key={index} xs={12} md={6} lg={3}>
-              <CategoryWrapper>
-                <Box
-                  component="img"
-                  alt={category.alt}
-                  src={category.icon}
-                />
-                <CategoryTitle>
-                  {category.title}
-                </CategoryTitle>
-              </CategoryWrapper>
-            </Grid>
-          )
-        })}
-        
-      </Grid>
-    </Box>
+      <Box
+        sx={{
+          p: 12,
+          mt: 24,
+          background: 'url(/texture.png)',
+          backgroundColor: '#f1f1f1',
+          textAlign: 'center'
+        }}
+      >      
+        <Grid container>
+          {categories.map((category, index) => {
+            return (
+              <Grid item key={index} xs={12} md={6} lg={3}>
+                <CategoryWrapper>
+                  <Box
+                    component="img"
+                    alt={category.alt}
+                    src={category.icon}
+                  />
+                  <CategoryTitle>
+                    {category.title}
+                  </CategoryTitle>
+                </CategoryWrapper>
+              </Grid>
+            )
+          })}
+          
+        </Grid>
+      </Box>
+    </Container>
   );
 };
 export default Categories;

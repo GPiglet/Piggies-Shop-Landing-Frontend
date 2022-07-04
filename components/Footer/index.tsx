@@ -41,10 +41,9 @@ const Footer = (props: any) => {
     {header: 'Customer Service', spacing: 4, items: ['Help', 'Leader Support', 'Pleasant Grove Product Center', 'Recall—Important Safety Information']},
   ]
   return (
-    <>
+    <Container maxWidth="xl" disableGutters>
+    <CssBaseline />
     <BackgroundWrapper>
-      <CssBaseline />
-      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}}} disableGutters>
         <Grid container>
           <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center'}}>
             <List
@@ -81,7 +80,6 @@ const Footer = (props: any) => {
             })
           }
         </Grid>
-      </Container>
     </BackgroundWrapper>
     <FooterWrapper>
       <Grid container textAlign={'center'}>
@@ -98,7 +96,7 @@ const Footer = (props: any) => {
         </Grid>
       </Grid>
     </FooterWrapper>
-    </>
+    </Container>
   );
 };
 export default Footer;

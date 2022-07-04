@@ -26,8 +26,8 @@ const Intro = (props: any) => {
   return (
     <Box>
       <CssBaseline />
+      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}, position: 'relative'}} disableGutters>
       <img src="/intro-overlay.svg" alt="overlay" width={774} height={879} className={styles.overlay} />
-      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}}} disableGutters>
         <Grid container>
           <Grid item xs={12} md={5}>
             <CoverWrapper>

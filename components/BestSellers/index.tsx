@@ -13,6 +13,7 @@ import ProductTitle from '../Products/ProductTitle';
 import ProductDesc from '../Products/ProductDesc';
 import ProductPrice from '../Products/ProductPrice';
 import ProductAddCart from '../Products/ProductAddCart';
+import Container from '@mui/material/Container';
 
 const BestSellers = (props: any) => {
   const products = [
@@ -23,94 +24,96 @@ const BestSellers = (props: any) => {
   ];
   const colors = ['#E29696', '#A1E296', '#82D2EC', '#9E9DF1'];
   return (
-    <Box
-      sx={{
-        p: 12,
-        mt: 16,
-        background: 'url(/best-seller-left.png) no-repeat',
-        backgroundSize: 'auto',
-        backgroundPositionX: 'left',
-        backgroundPositionY: 'bottom',
-        backgroundColor: '#f1f1f1',
-        textAlign: 'center'
-      }}
-    >
+    <Container maxWidth="xl" disableGutters>
       <CssBaseline />
-      <Grid container>
-        <Grid item xs={12} md={4} 
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <div>
-          <Typography
+      <Box
+        sx={{
+          p: 12,
+          mt: 16,
+          background: 'url(/best-seller-left.png) no-repeat',
+          backgroundSize: 'auto',
+          backgroundPositionX: 'left',
+          backgroundPositionY: 'bottom',
+          backgroundColor: '#f1f1f1',
+          textAlign: 'center'
+        }}
+      >
+        <Grid container>
+          <Grid item xs={12} md={4} 
             sx={{
-              color: props.theme.palette.primary.main,
-              fontFamily: 'Abril Fatface',
-              fontSize: '3rem',
-              fontWeight: 700,
-              lineHeight: .9,
-              m: 1,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
-            Best Sellers
-          </Typography>
-          <Button variant="contained" sx={{m: 2, padding: '10px 48px', borderRadius: '8px'}} >
-            Shop All
-          </Button>
-          </div>
-        </Grid>
-        {products.slice(0, 2).map((product, index) => {
-          return (
-            <Grid item key={index} xs={12} md={4}
+            <div>
+            <Typography
               sx={{
-                display: 'flex',
-                justifyContent: 'center'
+                color: props.theme.palette.primary.main,
+                fontFamily: 'Abril Fatface',
+                fontSize: '3rem',
+                fontWeight: 700,
+                lineHeight: .9,
+                m: 1,
               }}
             >
-              <ProductWrapper>
-                <ProductImageWrapper>
-                  <ProductAddCart variant="contained" color="secondary">
-                    Add To Cart
-                  </ProductAddCart>
-                  <Box
-                    sx={{
-                      width: '100%'
-                    }}
-                    component="img"
-                    alt={product.title}
-                    src={product.image}
-                  />
-                </ProductImageWrapper>
-                <ProductTitle>
-                  {product.title}
-                </ProductTitle>
-                <ProductDesc>
-                  {product.desc}
-                </ProductDesc>
-                <Grid container>
-                  <Grid item xs={6} sx={{display: 'flex', alignItems: 'center'}}>
-                    <Stack direction="row">
-                      <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
-                      <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
-                      <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
-                    </Stack>
+              Best Sellers
+            </Typography>
+            <Button variant="contained" sx={{m: 2, padding: '10px 48px', borderRadius: '8px'}} >
+              Shop All
+            </Button>
+            </div>
+          </Grid>
+          {products.slice(0, 2).map((product, index) => {
+            return (
+              <Grid item key={index} xs={12} md={4}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center'
+                }}
+              >
+                <ProductWrapper>
+                  <ProductImageWrapper>
+                    <ProductAddCart variant="contained" color="secondary">
+                      Add To Cart
+                    </ProductAddCart>
+                    <Box
+                      sx={{
+                        width: '100%'
+                      }}
+                      component="img"
+                      alt={product.title}
+                      src={product.image}
+                    />
+                  </ProductImageWrapper>
+                  <ProductTitle>
+                    {product.title}
+                  </ProductTitle>
+                  <ProductDesc>
+                    {product.desc}
+                  </ProductDesc>
+                  <Grid container>
+                    <Grid item xs={6} sx={{display: 'flex', alignItems: 'center'}}>
+                      <Stack direction="row">
+                        <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
+                        <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
+                        <CircleIcon sx = {{color: colors[Math.floor(Math.random() * colors.length)]}}/>
+                      </Stack>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <ProductPrice>
+                        ${product.price}
+                      </ProductPrice>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={6}>
-                    <ProductPrice>
-                      ${product.price}
-                    </ProductPrice>
-                  </Grid>
-                </Grid>
-              </ProductWrapper>
-            </Grid>
-          )
-        })}
-        
-      </Grid>
-    </Box>
+                </ProductWrapper>
+              </Grid>
+            )
+          })}
+          
+        </Grid>
+      </Box>
+    </Container>
   );
 };
 export default BestSellers;
